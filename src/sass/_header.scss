@@ -1,0 +1,50 @@
+// Navbar
+.navbar {
+	border-radius: 0;
+}
+.navbar-default {
+	min-height: 60px;
+}
+
+.navbar-brand {
+	height: 60px;
+	font-size: 2.6em;
+	& > img {
+		display: inline-block;
+		max-height: 100%;
+	}
+	span {
+		font-family: $font;
+		position: relative;
+		top: 4px;
+		margin-left: 9px;
+		color: $brand-teal;
+	}
+}
+
+.navbar-nav {
+	& > li {
+		& > a {
+			line-height: 30px;
+			font-family: $font;
+			font-weight: 700;
+			color: $grey-dark;
+		}
+	}
+	.dropdown-menu {
+		background-color: #e7e7e7;
+		border-color: transparent;
+		border-top: 0;
+		min-width: 70px;
+		& > .active {
+			& > a {
+				background-color: $brand-green;
+			}
+		}
+		a {
+				@include transition;
+		}
+	}
+}
+
+// Language

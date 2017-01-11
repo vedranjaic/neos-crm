@@ -1,0 +1,116 @@
+// Template
+a {
+	color: $grey;
+	&:hover,
+	&:focus {
+		color: darken($grey, 10%);
+		text-decoration: none;
+	}
+}
+
+// Body
+body {
+	background-color: $grey-light;
+	&.login {
+		background: $brand-teal;
+		background: linear-gradient(to left, $brand-teal, $brand-green-light);
+	}
+}
+
+// Conatiner
+.content-main {
+	padding: 25px;
+	background-color: $white;
+}
+
+// Buttons
+.btn {
+	&-success {
+		background-color: $brand-green;
+		border-color: $brand-green;
+		&:hover,
+		&:focus {
+			background-color: darken($brand-green, 5%);
+			border-color: darken($brand-green, 5%);
+		}
+	}
+}
+
+// Alerts
+.alert {
+	&-danger {
+		background-color: lighten($brand-red, 20%);
+		color: darken($brand-red, 20%);
+	}
+}
+
+//--- [ PANELS ]
+.panel {
+	border: 0;
+	background-color: rgba($white, 0.9);
+}
+// Panel heading
+.panel-heading {
+	padding: 30px 25px;
+	background-color: transparent !important;
+	border-color: #ddd !important;
+	.panel-title {
+		font-family: $font;
+		font-weight: 700;
+		text-transform: uppercase;
+		color: $grey-dark;
+		font-size: 1.8em;
+	}
+}
+// Panel body
+.panel-body {
+	padding: 30px 25px;
+	label {
+		color: #777;
+		font-size: 1.1em;
+	}
+}
+// Panel footer
+.panel-footer {
+	padding: 10px 25px;
+	background-color: transparent;
+	a {
+		@include transition;
+	}
+}
+
+//--- [ FORMS ]
+.form-control {
+	box-shadow: none;
+	border-color: #ddd;
+	&:focus {
+		border-color: $brand-teal;
+		box-shadow: none;
+	}
+}
+input[type="checkbox"] {
+	margin-left: 0 !important;
+}
+// Checkboxes
+.checkbox {
+	@extend %checkbox;
+	@include transition;
+	@include checkbox($grey-dark, '\f0c8', '\f14a');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

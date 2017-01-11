@@ -1,0 +1,18 @@
+// Typography
+@font-face {
+  font-family: 'Gilroy Bold';
+  src: url('assets/fonts/gilroy-extrabold-webfont.eot');
+  src: url('assets/fonts/gilroy-extrabold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('assets/fonts/gilroy-extrabold-webfont.woff') format('woff'),
+       url('assets/fonts/gilroy-extrabold-webfont.ttf')  format('truetype'),
+       url('assets/fonts/gilroy-extrabold-webfont.svg#svgFontName') format('svg');
+}
+
+@font-face {
+  font-family: 'Gilroy Light';
+  src: url('assets/fonts/gilroy-light-webfont.eot');
+  src: url('assets/fonts/gilroy-light-webfont.eot?#iefix') format('embedded-opentype'),
+       url('assets/fonts/gilroy-light-webfont.woff') format('woff'),
+       url('assets/fonts/gilroy-light-webfont.ttf')  format('truetype'),
+       url('assets/fonts/gilroy-light-webfont.svg#svgFontName') format('svg');
+}

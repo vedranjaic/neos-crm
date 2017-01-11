@@ -1,0 +1,214 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>CRM | NEOS</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- favicons -->
+	<link rel="icon" type="image/x-icon" href="favicon.ico"/>
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+	<!-- styles / fonts -->
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,700&amp;subset=latin-ext" rel="stylesheet">
+	<script src="https://use.fontawesome.com/752a0f78c0.js"></script>
+	<!-- <link href="https://fonts.googleapis.com/css?family=Dosis:300,700&amp;subset=latin-ext" rel="stylesheet"> -->
+	
+</head>
+<body class="login">
+
+	<!--[if lt IE 8]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand font-light" href="#">
+					<img src="assets/images/logo.svg" alt="NEOS"> <span>CRM</span>
+				</a>
+			</div>
+			<!-- /.navbar-header -->
+
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#">Sales pipeline</a></li>
+					<li><a href="#">Leads</a></li>
+					<li><a href="#">Accounts</a></li>
+					<li><a href="#">Contacts</a></li>
+					<li><a href="#">Campaigns</a></li>
+					<li><a href="#">Projects</a></li>
+					<li>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Accounting <i class="icon fa fa-angle-down"></i></a>
+						<ul class="dropdown-menu dropdown-language">
+							<li><a href="#">Business Year and Tax</a></li>
+							<li><a href="#">Foreign Exchange List</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Master Data <i class="icon fa fa-angle-down"></i></a>
+						<ul class="dropdown-menu dropdown-language">
+							<li><a href="#">Invoice Type</a></li>
+							<li><a href="#">Project Type</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">HRV <i class="icon fa fa-angle-down"></i></a>
+						<ul class="dropdown-menu dropdown-language">
+							<li class="active"><a href="#">HRV</a></li>
+							<li><a href="#">ENG</a></li>
+	<!-- 						<li role="separator" class="divider"></li>
+							<li><a href="/">Index</a></li>
+							<li><a href="login.html">Login</a></li> -->
+						</ul>
+					</li>
+					<li class="dropdown hidden">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Davorin Capan <i class="icon fa fa-angle-down"></i></a>
+						<ul class="dropdown-menu dropdown-language">
+							<li><a href="#">Log out</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
+
+	<div class="panel panel-default panel-login login-login">
+
+		<div class="panel-heading">
+			<h3 class="panel-title">Prijava</h3>
+		</div>
+		<!-- .panel-heading -->
+
+		<div class="panel-body">
+			<form action="/">
+				<div class="form-group">
+					<label for="userName">Korisničko ime:</label>
+					<input type="text" class="form-control" id="userName" autofocus>
+				</div>
+				<div class="form-group">
+					<label for="passWord">Lozinka:</label>
+					<input type="password" class="form-control" id="passWord">
+				</div>
+				<div class="checkbox">
+					<input type="checkbox" id="remeberMe"> 
+					<label for="remeberMe">Zapamti me</label>
+				</div>
+				<button type="submit" class="btn btn-success btn-lg btn-block">Prijavi se</button>
+			</form>
+		</div>
+		<!-- /.panel-body -->
+
+		<div class="panel-footer clearfix">
+			<div class="pull-left">
+				<small><a href="#zaboravili-ste-lozinku" class="btnLoginForgot">Zaboravili ste lozinku?</a></small>
+			</div>
+			<div class="pull-right">
+				<small><a href="#promjena-lozinke" class="btnLoginReset">Promjena lozinke</a></small>
+			</div>
+		</div>
+		<!-- /.panel-footer -->
+
+	</div>
+	<!-- /.panel -->
+	<div class="panel panel-default panel-login login-forgot hidden">
+
+		<div class="panel-heading">
+			<h3 class="panel-title">Zaboravili ste lozinku?</h3>
+		</div>
+		<!-- .panel-heading -->
+
+		<div class="panel-body">
+			<div class="alert alert-danger">
+				<i class="icon fa fa-warning"></i> Ne postoji korisnik s tim korisničkim imenom!
+			</div>
+			<form>
+				<div class="form-group">
+					<label for="userName">Korisničko ime:</label>
+					<input type="text" class="form-control" id="userName">
+				</div>
+				<button type="submit" class="btn btn-success btn-lg btn-block">Pošalji lozinku</button>
+			</form>
+		</div>
+		<!-- /.panel-body -->
+
+		<div class="panel-footer clearfix">
+			<div class="pull-left">
+				<small><a href="login.html" class="btnLogin">&larr; Povratak na prijavu</a></small>
+			</div>
+			<div class="pull-right">
+				<small><a href="#promjena-lozinke" class="btnLoginReset">Promjena lozinke</a></small>
+			</div>
+		</div>
+		<!-- /.panel-footer -->
+
+	</div>
+	<!-- /.panel -->
+	<div class="panel panel-default panel-login login-reset hidden">
+
+		<div class="panel-heading">
+			<h3 class="panel-title">Promjena lozinke</h3>
+		</div>
+		<!-- .panel-heading -->
+
+		<div class="panel-body">
+			<div class="alert alert-danger">
+				<i class="icon fa fa-warning"></i> Potrebno je ispuniti sva polja!
+			</div>
+			<form>
+				<div class="form-group">
+					<label for="userName">Korisničko ime:</label>
+					<input type="text" class="form-control" id="userName">
+				</div>
+				<div class="form-group">
+					<label for="passWord">Trenutna lozinka:</label>
+					<input type="password" class="form-control" id="passWord">
+				</div>
+				<div class="form-group">
+					<label for="newpassWord">Nova lozinka:</label>
+					<input type="password" class="form-control" id="newpassWord">
+				</div>
+				<div class="form-group">
+					<label for="repeatpassWord">Ponovi lozinku:</label>
+					<input type="password" class="form-control" id="repeatpassWord">
+				</div>
+				<button type="submit" class="btn btn-success btn-lg btn-block">Promjeni lozinku</button>
+			</form>
+		</div>
+		<!-- /.panel-body -->
+
+		<div class="panel-footer clearfix">
+			<div class="pull-left">
+				<small><a href="login.html" class="btnLogin">&larr; Povratak na prijavu</a></small>
+			</div>
+			<div class="pull-right">
+				<small><a href="#zaboravili-ste-lozinku" class="btnLoginForgot">Zaboravili ste lozinku?</a></small>
+			</div>
+		</div>
+		<!-- /.panel-footer -->
+
+	</div>
+	<!-- /.panel -->
+	
+
+	
+	<!-- scripts -->
+	<script src="assets/js/vendors/modernizr.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="assets/js/vendors/jquery.min.js"><\/script>')</script>
+	<script src="assets/js/vendors/bootstrap.min.js"></script>
+	<script src="assets/js/app.js"></script>
+
+</body>
+</html>
