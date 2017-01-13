@@ -3,10 +3,10 @@ $black: #161616;
 $white: #ffffff;
 
 // Functional colors
-$func-yellow: #ffca3a;
-$func-green: #8dc63f;
-$func-blue: #1982c4;
-$func-red: #ff595e;
+$func-yellow: #ffc901;
+$func-green: #3bc559;
+$func-blue: #3ba7c5;
+$func-red: #c53b62;
 
 // Brand colors
 $brand-teal: #96ced3;
@@ -16,13 +16,20 @@ $brand-red: #d39b96;
 
 // Monochrome
 $grey: #acacac;
-$grey-light: #fafafa;
+$grey-bg: #f4f6f7;
+$grey-light: #f3f5f6;
 $grey-medium: #f1f1f1;
 $grey-border: #e7e7e7;
 $grey-dark: #7b7b7b;
+$grey-sidebar: #788e9a;
+$grey-sidebar-font: #dde2e5;
 
 // Social colors
 
 // Fonts
 $font-fallback: Helvetica, Arial, sans-serif;
 $font: 'Quicksand', $font-fallback;
+
+// Layout
+$sidebar-width: 280px;
+$subnav-height: 50px;

@@ -1,5 +1,10 @@
 // Login
-.login {
+.page-login {
+	// Hide profile and quck-link in menu on login
+	.dropdown-profile,
+	.dropdown-new {
+		display: none;
+	}
 	.panel-login {
 		// position: absolute;
 		// left: 50%;
@@ -7,6 +12,7 @@
 		// transform: translate(-50%, -50%);
 	}
 }
+
 .panel-login {
 	max-width: 400px;
 	margin: 10% auto 0;
@@ -23,5 +29,6 @@
 	}
 	label {
 		font-family: $font;
+		color: $grey-dark;
 	}
 }

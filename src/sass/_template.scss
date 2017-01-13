@@ -1,13 +1,4 @@
 // Template
-a {
-	color: $grey;
-	&:hover,
-	&:focus {
-		color: darken($grey, 10%);
-		text-decoration: none;
-	}
-}
-
 // Body
 body {
 	background-color: $grey-light;
@@ -17,21 +8,185 @@ body {
 	}
 }
 
-// Conatiner
+// Anchors
+a {
+	color: $grey;
+	&:hover,
+	&:focus {
+		color: darken($grey, 10%);
+		text-decoration: none;
+	}
+}
+
+// Lists
+.list-inline {
+	li {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+// Container
+.content {
+	margin-left: $sidebar-width;
+	padding-top: 0;
+	border-top: 1px solid $grey-medium;
+	&.container-fluid {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
 .content-main {
 	padding: 25px;
 	background-color: $white;
+	&.content-table {
+		padding: 0;
+		.table {
+			th,
+			td {
+				&:first-child {
+					padding-left: 30px;
+				}
+				&:last-child {
+					padding-right: 30px;
+				}
+			}
+		}
+	}
+}
+
+//--- [ PAGE HEADING ]
+.page-heading {
+	padding: 20px 30px;
+	border-bottom: 1px solid $grey-bg;
+	position: relative;
+	.page-title {
+		font-family: $font;
+		color: $grey-sidebar;
+		margin: 0;
+	}
+	.page-subtitle {
+		color: $grey;
+		font-family: $font;
+	}
+	// Page control
+	.page-control {
+		font-family: $font;
+		font-weight: 500;
+		position: absolute;
+		right: 30px;
+		top: 20px;
+		ul {
+			margin-bottom: 0;
+			li {
+				vertical-align: middle;
+			}
+		}
+		.dropdown-toggle {
+			border-right: 1px solid $grey-medium;
+			position: relative;
+			display: block;
+			text-align: right;
+			padding-right: 50px;
+			margin-right: 25px;
+			small {
+				text-transform: uppercase;
+				font-weight: 400;
+				font-size: 10px;
+			}
+			.icon {
+				position: absolute;
+				right: 18px;
+				top: 50%;
+				margin-top: -0.5em;
+				font-size: 20px;
+			}
+		}
+		.dropdown-menu-right {
+			right: 75px;
+			& > .active {
+				& > a {
+					background-color: $grey-sidebar;
+				}
+			}
+		}
+		// Filter
+		.page-view {
+			font-size: 16px;
+		}
+	}
+}
+
+// Dropdowns
+.dropdown-menu {
+	box-shadow: none;
+	@include breakpoint(sm) {
+		.navbar-nav & {
+			right: -1px;
+		}
+	}
+	a {
+		@include transition;
+		&:hover,
+		&:focus {
+			.icon {
+				opacity: 1;
+			}
+		}
+		.icon {
+			width: 20px;
+			opacity: 0.6;
+		}
+	}
 }
 
 // Buttons
 .btn {
+	@include transition;
+	font-family: $font;
+	font-weight: 500;
+	&-default {
+		background-color: $grey-sidebar-font;
+		border-color: $grey-sidebar-font;
+		color: $grey-sidebar;
+		&:hover,
+		&:focus {
+			background-color: darken($grey-sidebar-font, 10%);
+			border-color: darken($grey-sidebar-font, 10%);
+			color: $grey-sidebar;
+		}
+	}
 	&-success {
 		background-color: $brand-green;
 		border-color: $brand-green;
 		&:hover,
+		&:focus,
+		&:active,
+		&:active:focus {
+			background-color: darken($brand-green, 10%);
+			border-color: darken($brand-green, 10%);
+		}
+	}
+	&-danger {
+		background-color: $brand-red;
+		border-color: $brand-red;
+		&:hover,
 		&:focus {
-			background-color: darken($brand-green, 5%);
-			border-color: darken($brand-green, 5%);
+			background-color: darken($brand-red, 10%);
+			border-color: darken($brand-red, 10%);
+		}
+	}
+}
+.btn-group {
+	&.open {
+		.dropdown-toggle {
+			box-shadow: none;
+		}
+		.btn-success {
+			&.dropdown-toggle {
+				background-color: darken($brand-green, 5%);
+				border-color: darken($brand-green, 5%);
+			}
 		}
 	}
 }
@@ -98,7 +253,93 @@ input[type="checkbox"] {
 	@include checkbox($grey-dark, '\f0c8', '\f14a');
 }
 
-
+// --- [ TABLES ]
+.table {
+	font-family: $font;
+	margin-bottom: 0;
+	color: $grey-sidebar;
+	// Thead
+	thead {
+		th {
+			font-weight: 700;
+			a {
+				display: block;
+				color: $grey-sidebar;
+			}
+			.table-sort {
+				@include transition;
+				float: right;
+				font-size: 16px;
+				opacity: 0;
+			}
+			&:hover {
+				.table-sort {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	// Tbody
+	tbody {
+		td {
+			font-weight: 400;
+			border-top: 0 !important;
+		}
+	}
+	// Buttons 
+	.btn-sm {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	.show-all {
+		padding-top: 15px;
+		padding-bottom: 15px;
+		a {
+			color: $grey-sidebar;
+			font-size: 16px;
+			font-weight: 500;
+			&:hover,
+			&:focus {
+				color: darken($grey-sidebar, 10%);
+			}
+		}
+	}
+	// Dropdowns
+	.dropdown-table-edit {
+		background-color: darken($brand-green, 10%);
+		border-color: darken($brand-green, 10%);
+		li {
+			a {
+				color: $white;
+				font-size: 13px;
+				&:hover,
+				&:focus {
+					background-color: $brand-green;
+				}
+			}
+		}
+	}
+}
+.table-striped {
+	& > thead {
+		& > tr {
+			th {
+				background-color: $grey-light;
+				border-bottom: 0;
+			}
+		}
+	}
+	& > tbody {
+		& > tr {
+			&:nth-of-type(odd) {
+				background-color: $white;
+			}
+			&:nth-of-type(even) {
+				background-color: $grey-light;
+			}
+		}
+	}
+}
 
 
 

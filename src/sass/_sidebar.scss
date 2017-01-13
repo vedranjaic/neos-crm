@@ -1,0 +1,29 @@
+// Sidebar
+.sidebar {
+	position: fixed;
+	width: $sidebar-width;
+	height: 100%;
+	background-color: $grey-sidebar;
+	a {
+		color: $grey-sidebar-font;
+		font-family: $font;
+		font-weight: 400;
+		border-bottom: 1px solid darken($grey-sidebar, 2%);
+		&:hover,
+		&:focus,
+		&[aria-expanded="true"] {
+			background-color: darken($grey-sidebar, 5%) !important;
+		}
+	}
+	.active {
+		a {
+			background-color: darken($grey-sidebar, 5%) !important;
+		}
+	}
+	// Submenu
+	.main-submenu {
+		a {
+			padding-left: 30px;
+		}
+	}
+}

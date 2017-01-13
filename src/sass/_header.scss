@@ -1,14 +1,29 @@
 // Navbar
 .navbar {
 	border-radius: 0;
+	margin-bottom: 0;
 }
 .navbar-default {
 	min-height: 60px;
+	background-color: $grey-bg;
+	.navbar-nav {
+		& > .open {
+			& > a {
+				background-color: $grey-sidebar-font;
+				&:focus,
+				&:active,
+				&:active:focus {
+					background-color: $grey-sidebar-font;
+				}
+			}
+		}
+	}
 }
 
 .navbar-brand {
 	height: 60px;
 	font-size: 2.6em;
+	font-weight: 300;
 	& > img {
 		display: inline-block;
 		max-height: 100%;
@@ -27,24 +42,110 @@
 		& > a {
 			line-height: 30px;
 			font-family: $font;
-			font-weight: 700;
-			color: $grey-dark;
+			font-weight: 500;
+			color: $grey !important;
+		}
+		&.open {
+			& > a {
+				color: $grey-sidebar !important;
+			}
 		}
 	}
 	.dropdown-menu {
-		background-color: #e7e7e7;
+		background-color: $grey-sidebar-font;
 		border-color: transparent;
 		border-top: 0;
-		min-width: 70px;
 		& > .active {
 			& > a {
 				background-color: $brand-green;
+				color: $white;
+				&:hover,
+				&:focus {
+					color: $white;
+				}
 			}
 		}
 		a {
-				@include transition;
+			@include transition;
+			color: $grey-sidebar;
+			&:hover,
+			&:focus {
+				color: $grey-sidebar;
+			}
+		}
+		.divider {
+			background-color: $grey-border;
+		}
+	}
+	.dropdown-language {
+		.dropdown-menu {
+			min-width: 74px;
+		}
+	}
+	.dropdown-new {
+		.dropdown-toggle {
+			font-size: 1.4em;
 		}
 	}
 }
 
-// Language
+// Subnav
+.subnav {
+	@include clearfix;
+	height: $subnav-height;
+	.menu-control {
+		float: left;
+		width: $sidebar-width;
+		background-color: darken($grey-sidebar, 10%);
+		padding-left: 15px;
+		padding-right: 15px;
+		ul {
+			margin-bottom: 0;
+			li {
+				color: $grey-sidebar-font;
+				line-height: $subnav-height;
+			}
+		}
+		.menu-header {
+			text-transform: uppercase;
+			font-size: 11px;
+			font-family: $font;
+			font-weight: 300;
+		}
+	}
+	.control-bar {
+		@include clearfix;
+		background-color: $white;
+		padding-left: $sidebar-width + 30px;
+		padding-right: 30px;
+		.breadcrumb {
+			background-color: transparent;
+			float: left;
+			margin-bottom: 0;
+			padding: 0;
+			& > li {
+				& + li {
+					&:before {
+						content: '\f105';
+						font-family: 'FontAwesome';
+						padding: 0 7px;
+					}
+				}
+			}
+		}
+		.control-buttons {
+			float: right;
+			margin-bottom: 0;
+			.btn-sm {
+				padding-top: 3px;
+				padding-bottom: 3px;
+			}
+		}
+		ol,
+		ul {
+			li {
+				line-height: $subnav-height;
+			}
+		}
+	}
+}

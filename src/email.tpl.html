@@ -1,5 +1,5 @@
 @@include('modules/_header.html', {
-	"body-class": "page-login"
+	"body-class": "page-index"
 })
 
 	<!--[if lt IE 8]>
@@ -7,10 +7,19 @@
 	<![endif]-->
 
 	@@include('modules/_nav.html')
+	@@include('modules/_subnav.html')
 
-	@@include('modules/login/_login.html')
-	@@include('modules/login/_forgot-password.html')
-	@@include('modules/login/_reset-password.html')
-	
+	@@include('modules/_sidebar.html')
+
+
+	<div class="content container-fluid">
+		
+		@@include('modules/_page-email.html', {
+			"page-title": "E-mail"
+		})
+		
+
+	</div>
+	<!-- /.content -->
 
 @@include('modules/_footer.html')

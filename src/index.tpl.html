@@ -1,5 +1,5 @@
 @@include('modules/_header.html', {
-	"body-class": "index"
+	"body-class": "page-index"
 })
 
 	<!--[if lt IE 8]>
@@ -7,13 +7,19 @@
 	<![endif]-->
 
 	@@include('modules/_nav.html')
+	@@include('modules/_subnav.html')
+
+	@@include('modules/_sidebar.html')
+
 
 	<div class="content container-fluid">
-		<div class="content-main">
-			Its alive! Lorem10
-		</div>
-		<!-- /.container-fluid -->
+		
+		@@include('modules/_page-content.html', {
+			"page-title": "Accounts"
+		})
+		
+
 	</div>
-	<!-- /.content-main -->
+	<!-- /.content -->
 
 @@include('modules/_footer.html')
