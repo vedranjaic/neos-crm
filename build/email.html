@@ -18,13 +18,13 @@
 	<!-- <link href="https://fonts.googleapis.com/css?family=Dosis:300,700&amp;subset=latin-ext" rel="stylesheet"> -->
 	
 </head>
-<body class="page-index">
+<body class="page-email">
 
 	<!--[if lt IE 8]>
 		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
 
-	<nav class="navbar navbar-default">
+	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -33,13 +33,38 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand font-light" href="#">
+				<a class="navbar-brand font-light" href="/">
 					<img src="assets/images/logo.svg" alt="NEOS"> <span>CRM</span>
 				</a>
 			</div>
 			<!-- /.navbar-header -->
 
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+				<form class="navbar-form navbar-left navbar-search">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Search" id="search">
+					</div>
+					<button type="submit" class="btn btn-default"><i class="icon fa fa-search"></i></button>
+					<ul class="search-results list-unstyled hidden">
+						<li>
+							<span class="search-results-type">Accounts</span>
+							<ul class="type-results list-unstyled">
+								<li><a href="#">Crodux derivati d.o.o.</a></li>
+								<li><a href="#">BUG d.o.o.</a></li>
+							</ul>
+						</li>
+						<li>
+							<span class="search-results-type">Receipts</span>
+							<ul class="type-results list-unstyled">
+								<li><a href="#">Crodux derivati d.o.o.</a></li>
+								<li><a href="#">BUG d.o.o.</a></li>
+							</ul>
+						</li>
+					</ul>
+					<!-- /.search-results -->
+				</form>
+
 				<ul class="nav navbar-nav navbar-right">
 					<li class="dropdown dropdown-language">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">HRV <i class="icon fa fa-angle-down"></i></a>
@@ -53,9 +78,10 @@
 						<ul class="dropdown-menu">
 							<li><a href="#"><i class="icon fa fa-user-circle"></i> Profile settings</a></li>
 							<li><a href="#"><i class="icon fa fa-file-text"></i> My notes</a></li>
+							<li><a href="login.html"><i class="icon fa fa-arrow-circle-right"></i> Login</a></li>
 							<li><a href="email.html"><i class="icon fa fa-envelope"></i> Email</a></li>
 							<li role="separator" class="divider"></li>
-							<li><a href="#"><i class="icon fa fa-power-off"></i> Log out</a></li>
+							<li><a href="login.html"><i class="icon fa fa-power-off"></i> Log out</a></li>
 						</ul>
 					</li>
 					<li class="dropdown dropdown-new">
@@ -77,7 +103,7 @@
 	<div class="subnav">
 		<div class="menu-control">
 			<ul class="list-inline">
-				<li class="menu-header"><i class="icon fa fa-bars"></i> Izbornik</li>
+				<li class="menu-header"><i class="icon fa fa-bars"></i> Menu</li>
 				<li>
 					<a href="#"><i class="icon fa fa-angle-left"></i></a>
 				</li>
@@ -150,6 +176,7 @@
 						</li>
 						<li>
 							<a href="#" class="btn btn-default btn-add-new"><i class="icon fa fa-plus"></i>	Add New</a>
+							<a href="#" class="btn btn-default btn-filter"><i class="icon fa fa-filter"></i> Filter</a>
 						</li>
 					</ul>
 				</div>
@@ -158,78 +185,86 @@
 			<!-- /.page-heading -->
 	
 			<div class="table-responsive table-email-list">
-				<table class="table table-striped table-hover">
+				<table class="table table-striped table-hover table-select">
 					<thead>
 						<tr>
-							<th>&nbsp;</th>
 							<th><a href="#">From <i class="icon table-sort fa fa-caret-up"></i></a></th>
 							<th><a href="#">Subject <i class="icon table-sort fa fa-caret-up"></i></a></th>
 							<th class="text-center"><a href="#">Att <i class="icon table-sort fa fa-caret-up"></i></a></th>
 						</tr>
 					</thead>
 					<tbody>
-						<tr class="mail-unread">
-							<td align="center">
-								<div class="checkbox">
-									<input type="checkbox" id="selectEmail01"> 
-									<label for="selectEmail01"></label>
-								</div>
-							</td>
+						<tr class="mail-active">
 							<td>Ivica Sruk</td>
-							<td>Ne stignem u ADF</td>
+							<td>Ne stignem u ADFu složit</td>
 							<td align="center"><i class="icon fa fa-paperclip"></i></td>
 						</tr>
-						<tr class="mail-read">
-							<td align="center">
-								<div class="checkbox">
-									<input type="checkbox" id="selectEmail01"> 
-									<label for="selectEmail01"></label>
-								</div>
-							</td>
+						<tr class="mail-unread">
+							<td>Ivica Sruk</td>
+							<td>Lorem ipsum dolor sit amet, consectetur...</td>
+							<td>&nbsp;</td>
+						</tr>
+						<tr class="mail-unread">
 							<td>Ivica Sruk</td>
 							<td>Lorem ipsum dolor sit amet, consectetur...</td>
 							<td>&nbsp;</td>
 						</tr>
 						<tr class="mail-read">
-							<td align="center">
-								<div class="checkbox">
-									<input type="checkbox" id="selectEmail01"> 
-									<label for="selectEmail01"></label>
-								</div>
-							</td>
 							<td>Ivica Sruk</td>
 							<td>Lorem ipsum dolor sit amet, consectetur...</td>
 							<td>&nbsp;</td>
 						</tr>
 						<tr class="mail-read">
-							<td align="center">
-								<div class="checkbox">
-									<input type="checkbox" id="selectEmail01"> 
-									<label for="selectEmail01"></label>
-								</div>
-							</td>
 							<td>Ivica Sruk</td>
 							<td>Lorem ipsum dolor sit amet, consectetur...</td>
 							<td>&nbsp;</td>
 						</tr>
 						<tr class="mail-read">
-							<td align="center">
-								<div class="checkbox">
-									<input type="checkbox" id="selectEmail01"> 
-									<label for="selectEmail01"></label>
-								</div>
-							</td>
 							<td>Ivica Sruk</td>
 							<td>Lorem ipsum dolor sit amet, consectetur...</td>
 							<td>&nbsp;</td>
 						</tr>
 						<tr class="mail-read">
-							<td align="center">
-								<div class="checkbox">
-									<input type="checkbox" id="selectEmail01"> 
-									<label for="selectEmail01"></label>
-								</div>
-							</td>
+							<td>Ivica Sruk</td>
+							<td>Lorem ipsum dolor sit amet, consectetur...</td>
+							<td>&nbsp;</td>
+						</tr>
+						<tr class="mail-read">
+							<td>Ivica Sruk</td>
+							<td>Lorem ipsum dolor sit amet, consectetur...</td>
+							<td>&nbsp;</td>
+						</tr>
+						<tr class="mail-unread">
+							<td>Ivica Sruk</td>
+							<td>Lorem ipsum dolor sit amet, consectetur...</td>
+							<td>&nbsp;</td>
+						</tr>
+						<tr class="mail-read">
+							<td>Ivica Sruk</td>
+							<td>Lorem ipsum dolor sit amet, consectetur...</td>
+							<td>&nbsp;</td>
+						</tr>
+						<tr class="mail-read">
+							<td>Ivica Sruk</td>
+							<td>Lorem ipsum dolor sit amet, consectetur...</td>
+							<td>&nbsp;</td>
+						</tr>
+						<tr class="mail-unread">
+							<td>Ivica Sruk</td>
+							<td>Lorem ipsum dolor sit amet, consectetur...</td>
+							<td>&nbsp;</td>
+						</tr>
+						<tr class="mail-read">
+							<td>Ivica Sruk</td>
+							<td>Lorem ipsum dolor sit amet, consectetur...</td>
+							<td>&nbsp;</td>
+						</tr>
+						<tr class="mail-read">
+							<td>Ivica Sruk</td>
+							<td>Lorem ipsum dolor sit amet, consectetur...</td>
+							<td>&nbsp;</td>
+						</tr>
+						<tr class="mail-read">
 							<td>Ivica Sruk</td>
 							<td>Lorem ipsum dolor sit amet, consectetur...</td>
 							<td>&nbsp;</td>
@@ -242,26 +277,32 @@
 				<table class="table table-striped table-hover">
 					<thead>
 						<tr>
-							<th colspan="4">Ne stignem u ADF</th>
+							<th colspan="3">Subject: Ne stignem u ADFu složit</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<td>Ivica Sruk</td>
+							<td>From: <span title="ivica.sruk@neos.hr">Ivica Sruk</span></td>
 							<td>To: davorin.capan@neos.hr</td>
 							<td align="right">13/01/2017. 10:35h</td>
-							<td align="right">
-								<a href="#" class="btn btn-sm"><i class="icon fa fa-reply"></i></a>
-								<a href="#" class="btn btn-sm"><i class="icon fa fa-reply-all"></i></a>
-								<a href="#" class="btn btn-sm"><i class="icon fa fa-mail-forward"></i></a>
-							</td>
 						</tr>
 					</tbody>
 				</table>
 				<div class="email-message">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis eum, quasi deserunt ab, natus nostrum nulla iure cupiditate tempore debitis similique nihil est cum suscipit praesentium, veniam neque. Eligendi velit nesciunt illum deserunt maiores, praesentium minus fugit, officia sit ea quasi dolores similique hic, nostrum? Incidunt neque non odio perspiciatis modi vel, voluptates voluptatum mollitia eum repellat a enim, ad dolor id. Fuga molestias impedit, nobis accusamus nihil. Mollitia beatae dolorum corrupti dolor, neque modi nesciunt eveniet repellendus, dolore provident architecto animi explicabo aut quaerat obcaecati ex eligendi aliquid asperiores velit, voluptatibus in eum saepe! Cupiditate, asperiores ut dolore similique.
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis eum, quasi deserunt ab, natus nostrum nulla iure cupiditate tempore debitis similique nihil est cum suscipit praesentium, veniam neque. Eligendi velit nesciunt illum deserunt maiores, praesentium minus fugit, officia sit ea quasi dolores similique hic, nostrum? Incidunt neque non odio perspiciatis modi vel, voluptates voluptatum mollitia eum repellat a enim, ad dolor id. Fuga molestias impedit, nobis accusamus nihil. Mollitia beatae dolorum corrupti dolor, neque modi nesciunt eveniet repellendus, dolore provident architecto animi explicabo aut quaerat obcaecati ex eligendi aliquid asperiores velit, voluptatibus in eum saepe! Cupiditate, asperiores ut dolore similique.</p>
 				</div>
 				<!-- /.email-message -->
+				<div class="email-attachments">
+					<ul class="list-unstyled">
+						<li><a href="#" data-toggle="modal" data-target="#modalMailAttachments" id="btnAtt01"><i class="icon fa fa-file"></i> Ugovor.docx</a></li>
+						<li><a href="#" data-toggle="modal" data-target="#modalMailAttachments" id="btnAtt02"><i class="icon fa fa-file"></i> Isplate.xlsx</a></li>
+						<li><a href="#" data-toggle="modal" data-target="#modalMailAttachments" id="btnAtt03"><i class="icon fa fa-file"></i> Upute za izradu.pdf</a></li>
+						<li><a href="#" data-toggle="modal" data-target="#modalMailAttachments" id="btnAtt04"><i class="icon fa fa-file"></i> Notes.txt</a></li>
+						<li><a href="#" data-toggle="modal" data-target="#modalMailAttachments" id="btnAtt05"><i class="icon fa fa-file"></i> Materijali.zip</a></li>
+					</ul>
+					<button class="btn btn-success" data-toggle="modal" data-target="#modalMailAttachments">Urudžbirati sve</button>
+				</div>
+				<!-- /.email-attachment -->
 			</div>
 			<!-- /.table-responsive -->
 
@@ -306,6 +347,138 @@
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 					<button type="button" class="btn btn-primary">Save changes</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+	<div class="modal fade modal-email-attachments" tabindex="-1" role="dialog" id="modalMailAttachments">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">E-mail attachments</h4>
+				</div>
+				<div class="modal-body">
+					<form class="form-attachments row">
+						<div class="form-group ur-broj">
+							<label for="urbroj" class="col-sm-8 control-label">Urudžbeni broj:</label>
+							<div class="col-sm-4">
+								<input type="text" class="form-control" id="urbroj" placeholder="Broj">
+							</div>
+						</div>
+						<div class="form-group col-sm-6">
+							<label for="doctype" class="control-label">Tip dokumenta:</label>
+							<select class="form-control" id="doctype">
+								<option>DOCX</option>
+								<option>PDF</option>
+								<option>PPT</option>
+								<option>XLSX</option>
+								<option>ZIP</option>
+							</select>
+						</div>
+						<div class="form-group col-sm-6">
+							<label for="docnum" class="control-label">Broj dokumenta:</label>
+							<input type="text" class="form-control" id="docnum" placeholder="Broj">
+						</div>
+						<div class="form-group col-sm-6">
+							<label for="project" class="control-label">Projekt / Posao:</label>
+							<select class="form-control" id="project">
+								<option>Project 1</option>
+								<option>Project 2</option>
+								<option>Project 3</option>
+								<option>Project 4</option>
+								<option>Project 5</option>
+							</select>
+						</div>
+						<div class="form-group col-sm-6">
+							<label for="client" class="control-label">Client:</label>
+							<select class="form-control" id="client">
+								<option>Crodux Derivati d.o.o.</option>
+								<option>BUG d.o.o.</option>
+								<option>Marli d.o.o.</option>
+							</select>
+						</div>
+						<div class="form-group col-sm-12">
+							<label for="contact" class="control-label">Kontakt:</label>
+							<select class="form-control" id="contact">
+								<option>Ivan Horvat, Account manager</option>
+								<option>Hrvoje Ivić, Project manager</option>
+								<option>Ivana Horvatić, Accounting</option>
+							</select>
+						</div>
+					</form>
+
+					<div class="table-responsive">
+						<table class="table table-condensed table-hover table-select table-attachments">
+							<thead>
+								<tr>
+									<th class="select">&nbsp;</th>
+									<th>Attachment file</th>
+									<th class="text-right">Type</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td align="center">
+										<div class="checkbox">
+											<input type="checkbox" id="selectAtt01"> 
+											<label for="selectAtt01"></label>
+										</div>
+									</td>
+									<td>Ugovor.docx</td>
+									<td align="right">DOCX</td>
+								</tr>
+								<tr>
+									<td align="center">
+										<div class="checkbox">
+											<input type="checkbox" id="selectAtt02"> 
+											<label for="selectAtt02"></label>
+										</div>
+									</td>
+									<td>Isplate.xlsx</td>
+									<td align="right">XLSX</td>
+								</tr>
+								<tr>
+									<td align="center">
+										<div class="checkbox">
+											<input type="checkbox" id="selectAtt03"> 
+											<label for="selectAtt03"></label>
+										</div>
+									</td>
+									<td>Upute za izradu.pdf</td>
+									<td align="right">PDF</td>
+								</tr>
+								<tr>
+									<td align="center">
+										<div class="checkbox">
+											<input type="checkbox" id="selectAtt05"> 
+											<label for="selectAtt05"></label>
+										</div>
+									</td>
+									<td>Notes.txt</td>
+									<td align="right">TXT</td>
+								</tr>
+								<tr>
+									<td align="center">
+										<div class="checkbox">
+											<input type="checkbox" id="selectAtt04"> 
+											<label for="selectAtt04"></label>
+										</div>
+									</td>
+									<td>Materijali.zip</td>
+									<td align="right">ZIP</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- /.table-responsive -->
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-success">Urudžbiraj</button>
 				</div>
 			</div>
 			<!-- /.modal-content -->

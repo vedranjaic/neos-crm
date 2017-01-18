@@ -6,6 +6,9 @@
 .navbar-default {
 	min-height: 60px;
 	background-color: $grey-bg;
+	.container-fluid {
+		padding-right: 30px;
+	}
 	.navbar-nav {
 		& > .open {
 			& > a {
@@ -16,6 +19,14 @@
 					background-color: $grey-sidebar-font;
 				}
 			}
+		}
+	}
+	.navbar-search {
+		padding-left: 20px;
+		margin-top: 13px;
+		margin-bottom: 13px;
+		input {
+			min-width: 250px;
 		}
 	}
 }
@@ -89,10 +100,56 @@
 	}
 }
 
+// --- [ SEARCH ]
+.navbar-search {
+	position: relative;
+}
+.search-results {
+	font-family: $font;
+	color: $grey-sidebar;
+	position: absolute;
+	top: 100%;
+	width: 100%;
+	background-color: $white;
+	border: 1px solid $grey-medium;
+	margin-top: 2px;
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+	// padding: 10px 15px;
+	&-type {
+		background-color: $grey-medium;
+		display: block;
+		padding: 5px 13px;
+		font-weight: 500;
+	}
+	.type-results {
+		a {
+			display: block;
+			padding: 5px 13px 5px 35px;
+			position: relative;
+			&:hover,
+			&:focus {
+				background-color: $grey-sidebar;
+				color: $grey-sidebar-font;
+			}
+			&:before {
+				content: '\f138';
+				position: absolute;
+				font-family: 'FontAwesome';
+				left: 13px;
+				opacity: 0.3;
+			}
+		}
+	}
+}
+
 // Subnav
 .subnav {
 	@include clearfix;
+	width: 100%;
 	height: $subnav-height;
+	position: fixed;
+	top: 60px;
+	z-index: 1000;
 	.menu-control {
 		float: left;
 		width: $sidebar-width;

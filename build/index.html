@@ -24,7 +24,7 @@
 		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
 
-	<nav class="navbar navbar-default">
+	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -33,13 +33,38 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand font-light" href="#">
+				<a class="navbar-brand font-light" href="/">
 					<img src="assets/images/logo.svg" alt="NEOS"> <span>CRM</span>
 				</a>
 			</div>
 			<!-- /.navbar-header -->
 
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+				<form class="navbar-form navbar-left navbar-search">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Search" id="search">
+					</div>
+					<button type="submit" class="btn btn-default"><i class="icon fa fa-search"></i></button>
+					<ul class="search-results list-unstyled hidden">
+						<li>
+							<span class="search-results-type">Accounts</span>
+							<ul class="type-results list-unstyled">
+								<li><a href="#">Crodux derivati d.o.o.</a></li>
+								<li><a href="#">BUG d.o.o.</a></li>
+							</ul>
+						</li>
+						<li>
+							<span class="search-results-type">Receipts</span>
+							<ul class="type-results list-unstyled">
+								<li><a href="#">Crodux derivati d.o.o.</a></li>
+								<li><a href="#">BUG d.o.o.</a></li>
+							</ul>
+						</li>
+					</ul>
+					<!-- /.search-results -->
+				</form>
+
 				<ul class="nav navbar-nav navbar-right">
 					<li class="dropdown dropdown-language">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">HRV <i class="icon fa fa-angle-down"></i></a>
@@ -53,9 +78,10 @@
 						<ul class="dropdown-menu">
 							<li><a href="#"><i class="icon fa fa-user-circle"></i> Profile settings</a></li>
 							<li><a href="#"><i class="icon fa fa-file-text"></i> My notes</a></li>
+							<li><a href="login.html"><i class="icon fa fa-arrow-circle-right"></i> Login</a></li>
 							<li><a href="email.html"><i class="icon fa fa-envelope"></i> Email</a></li>
 							<li role="separator" class="divider"></li>
-							<li><a href="#"><i class="icon fa fa-power-off"></i> Log out</a></li>
+							<li><a href="login.html"><i class="icon fa fa-power-off"></i> Log out</a></li>
 						</ul>
 					</li>
 					<li class="dropdown dropdown-new">
@@ -77,7 +103,7 @@
 	<div class="subnav">
 		<div class="menu-control">
 			<ul class="list-inline">
-				<li class="menu-header"><i class="icon fa fa-bars"></i> Izbornik</li>
+				<li class="menu-header"><i class="icon fa fa-bars"></i> Menu</li>
 				<li>
 					<a href="#"><i class="icon fa fa-angle-left"></i></a>
 				</li>
@@ -150,6 +176,7 @@
 						</li>
 						<li>
 							<a href="#" class="btn btn-default btn-add-new"><i class="icon fa fa-plus"></i>	Add New</a>
+							<a href="#" class="btn btn-default btn-filter"><i class="icon fa fa-filter"></i> Filter</a>
 						</li>
 					</ul>
 				</div>
@@ -157,7 +184,7 @@
 			</div>
 			<!-- /.page-heading -->
 	
-			<div class="table-responsive">
+			<div class="table-responsive table-data">
 				<table class="table table-striped table-hover">
 					<thead>
 						<tr>
@@ -305,10 +332,146 @@
 							</td>
 						</tr>
 						<tr>
-							<td class="show-all" colspan="8" align="center"><a href="#">Prikaži sve...</a></td>
+							<td>Crodux derivati d.o.o.</td>
+							<td>Croatia</td>
+							<td>Zagreb</td>
+							<td>Other services</td>
+							<td>crodux@crodux.hr</td>
+							<td>01/386-4107</td>
+							<td align="center"><i class="icon fa fa-check"></i></td>
+							<td align="center">
+								<div class="btn-group">
+									<button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#modalTableEdit">Edit</button>
+									<button type="button" class="btn btn-sm btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<i class="icon fa fa-gear"></i>
+										<span class="sr-only">Toggle Dropdown</span>
+									</button>
+									<ul class="dropdown-table-edit dropdown-menu dropdown-menu-right">
+										<li><a href="#"><i class="icon fa fa-times"></i> Delete</a></li>
+										<li><a href="#"><i class="icon fa fa-outdent"></i> Remove from list</a></li>
+									</ul>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>BUG d.o.o.</td>
+							<td>Croatia</td>
+							<td>Zagreb</td>
+							<td>Other services</td>
+							<td>bug@bug.hr</td>
+							<td>01/382-1555</td>
+							<td align="center"><i class="icon fa fa-check"></i></td>
+							<td align="center">
+								<div class="btn-group">
+									<button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#modalTableEdit">Edit</button>
+									<button type="button" class="btn btn-sm btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<i class="icon fa fa-gear"></i>
+										<span class="sr-only">Toggle Dropdown</span>
+									</button>
+									<ul class="dropdown-table-edit dropdown-menu dropdown-menu-right">
+										<li><a href="#"><i class="icon fa fa-times"></i> Delete</a></li>
+										<li><a href="#"><i class="icon fa fa-outdent"></i> Remove from list</a></li>
+									</ul>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>Marli d.o.o.</td>
+							<td>Croatia</td>
+							<td>Zagreb</td>
+							<td>Other services</td>
+							<td>info@marli.hr</td>
+							<td>01/481-6583</td>
+							<td align="center"><i class="icon fa fa-check"></i></td>
+							<td align="center">
+								<div class="btn-group">
+									<button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#modalTableEdit">Edit</button>
+									<button type="button" class="btn btn-sm btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										<i class="icon fa fa-gear"></i>
+										<span class="sr-only">Toggle Dropdown</span>
+									</button>
+									<ul class="dropdown-table-edit dropdown-menu dropdown-menu-right">
+										<li><a href="#"><i class="icon fa fa-times"></i> Delete</a></li>
+										<li><a href="#"><i class="icon fa fa-outdent"></i> Remove from list</a></li>
+									</ul>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td class="show-all" colspan="8" align="center"><a href="#">Show all...</a></td>
 						</tr>
 					</tbody>
 				</table>
+			</div>
+			<!-- /.table-responsive -->
+			<div class="table-responsive table-filter">
+				<form action="#">
+					<table class="table">
+						<thead>
+							<tr>
+								<th>Filter data</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<div class="form-group">
+										<label for="filterCountry" class="control-label">Country:</label>
+										<select class="input-sm form-control" id="filterCountry">
+											<option>Country 1</option>
+											<option>Country 2</option>
+											<option>Country 3</option>
+											<option>Country 4</option>
+											<option>Country 5</option>
+										</select>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="form-group">
+										<label for="filterTown" class="control-label">Town:</label>
+										<select class="input-sm form-control" id="filterTown">
+											<option>Town 1</option>
+											<option>Town 2</option>
+											<option>Town 3</option>
+											<option>Town 4</option>
+											<option>Town 5</option>
+										</select>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="form-group">
+										<label for="filterIndustry" class="control-label">Industry:</label>
+										<select class="input-sm form-control" id="filterIndustry">
+											<option>Industry 1</option>
+											<option>Industry 2</option>
+											<option>Industry 3</option>
+											<option>Industry 4</option>
+											<option>Industry 5</option>
+										</select>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="checkbox">
+										<input type="checkbox" id="selectActive"> 
+										<label for="selectActive">Active</label>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="filter-appy" align="center"><a href="#" class="btn btn-success btn-block">Apply filters</a></td>
+							</tr>
+							<tr>
+								<td class="filter-reset" align="center"><a href="#">Reset all filters</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</form>
 			</div>
 			<!-- /.table-responsive -->
 
@@ -353,6 +516,138 @@
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 					<button type="button" class="btn btn-primary">Save changes</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+	<div class="modal fade modal-email-attachments" tabindex="-1" role="dialog" id="modalMailAttachments">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">E-mail attachments</h4>
+				</div>
+				<div class="modal-body">
+					<form class="form-attachments row">
+						<div class="form-group ur-broj">
+							<label for="urbroj" class="col-sm-8 control-label">Urudžbeni broj:</label>
+							<div class="col-sm-4">
+								<input type="text" class="form-control" id="urbroj" placeholder="Broj">
+							</div>
+						</div>
+						<div class="form-group col-sm-6">
+							<label for="doctype" class="control-label">Tip dokumenta:</label>
+							<select class="form-control" id="doctype">
+								<option>DOCX</option>
+								<option>PDF</option>
+								<option>PPT</option>
+								<option>XLSX</option>
+								<option>ZIP</option>
+							</select>
+						</div>
+						<div class="form-group col-sm-6">
+							<label for="docnum" class="control-label">Broj dokumenta:</label>
+							<input type="text" class="form-control" id="docnum" placeholder="Broj">
+						</div>
+						<div class="form-group col-sm-6">
+							<label for="project" class="control-label">Projekt / Posao:</label>
+							<select class="form-control" id="project">
+								<option>Project 1</option>
+								<option>Project 2</option>
+								<option>Project 3</option>
+								<option>Project 4</option>
+								<option>Project 5</option>
+							</select>
+						</div>
+						<div class="form-group col-sm-6">
+							<label for="client" class="control-label">Client:</label>
+							<select class="form-control" id="client">
+								<option>Crodux Derivati d.o.o.</option>
+								<option>BUG d.o.o.</option>
+								<option>Marli d.o.o.</option>
+							</select>
+						</div>
+						<div class="form-group col-sm-12">
+							<label for="contact" class="control-label">Kontakt:</label>
+							<select class="form-control" id="contact">
+								<option>Ivan Horvat, Account manager</option>
+								<option>Hrvoje Ivić, Project manager</option>
+								<option>Ivana Horvatić, Accounting</option>
+							</select>
+						</div>
+					</form>
+
+					<div class="table-responsive">
+						<table class="table table-condensed table-hover table-select table-attachments">
+							<thead>
+								<tr>
+									<th class="select">&nbsp;</th>
+									<th>Attachment file</th>
+									<th class="text-right">Type</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td align="center">
+										<div class="checkbox">
+											<input type="checkbox" id="selectAtt01"> 
+											<label for="selectAtt01"></label>
+										</div>
+									</td>
+									<td>Ugovor.docx</td>
+									<td align="right">DOCX</td>
+								</tr>
+								<tr>
+									<td align="center">
+										<div class="checkbox">
+											<input type="checkbox" id="selectAtt02"> 
+											<label for="selectAtt02"></label>
+										</div>
+									</td>
+									<td>Isplate.xlsx</td>
+									<td align="right">XLSX</td>
+								</tr>
+								<tr>
+									<td align="center">
+										<div class="checkbox">
+											<input type="checkbox" id="selectAtt03"> 
+											<label for="selectAtt03"></label>
+										</div>
+									</td>
+									<td>Upute za izradu.pdf</td>
+									<td align="right">PDF</td>
+								</tr>
+								<tr>
+									<td align="center">
+										<div class="checkbox">
+											<input type="checkbox" id="selectAtt05"> 
+											<label for="selectAtt05"></label>
+										</div>
+									</td>
+									<td>Notes.txt</td>
+									<td align="right">TXT</td>
+								</tr>
+								<tr>
+									<td align="center">
+										<div class="checkbox">
+											<input type="checkbox" id="selectAtt04"> 
+											<label for="selectAtt04"></label>
+										</div>
+									</td>
+									<td>Materijali.zip</td>
+									<td align="right">ZIP</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- /.table-responsive -->
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-success">Urudžbiraj</button>
 				</div>
 			</div>
 			<!-- /.modal-content -->

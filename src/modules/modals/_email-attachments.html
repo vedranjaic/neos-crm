@@ -1,0 +1,132 @@
+<div class="modal fade modal-email-attachments" tabindex="-1" role="dialog" id="modalMailAttachments">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title">E-mail attachments</h4>
+			</div>
+			<div class="modal-body">
+				<form class="form-attachments row">
+					<div class="form-group ur-broj">
+						<label for="urbroj" class="col-sm-8 control-label">Urudžbeni broj:</label>
+						<div class="col-sm-4">
+							<input type="text" class="form-control" id="urbroj" placeholder="Broj">
+						</div>
+					</div>
+					<div class="form-group col-sm-6">
+						<label for="doctype" class="control-label">Tip dokumenta:</label>
+						<select class="form-control" id="doctype">
+							<option>DOCX</option>
+							<option>PDF</option>
+							<option>PPT</option>
+							<option>XLSX</option>
+							<option>ZIP</option>
+						</select>
+					</div>
+					<div class="form-group col-sm-6">
+						<label for="docnum" class="control-label">Broj dokumenta:</label>
+						<input type="text" class="form-control" id="docnum" placeholder="Broj">
+					</div>
+					<div class="form-group col-sm-6">
+						<label for="project" class="control-label">Projekt / Posao:</label>
+						<select class="form-control" id="project">
+							<option>Project 1</option>
+							<option>Project 2</option>
+							<option>Project 3</option>
+							<option>Project 4</option>
+							<option>Project 5</option>
+						</select>
+					</div>
+					<div class="form-group col-sm-6">
+						<label for="client" class="control-label">Client:</label>
+						<select class="form-control" id="client">
+							<option>Crodux Derivati d.o.o.</option>
+							<option>BUG d.o.o.</option>
+							<option>Marli d.o.o.</option>
+						</select>
+					</div>
+					<div class="form-group col-sm-12">
+						<label for="contact" class="control-label">Kontakt:</label>
+						<select class="form-control" id="contact">
+							<option>Ivan Horvat, Account manager</option>
+							<option>Hrvoje Ivić, Project manager</option>
+							<option>Ivana Horvatić, Accounting</option>
+						</select>
+					</div>
+				</form>
+
+				<div class="table-responsive">
+					<table class="table table-condensed table-hover table-select table-attachments">
+						<thead>
+							<tr>
+								<th class="select">&nbsp;</th>
+								<th>Attachment file</th>
+								<th class="text-right">Type</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td align="center">
+									<div class="checkbox">
+										<input type="checkbox" id="selectAtt01"> 
+										<label for="selectAtt01"></label>
+									</div>
+								</td>
+								<td>Ugovor.docx</td>
+								<td align="right">DOCX</td>
+							</tr>
+							<tr>
+								<td align="center">
+									<div class="checkbox">
+										<input type="checkbox" id="selectAtt02"> 
+										<label for="selectAtt02"></label>
+									</div>
+								</td>
+								<td>Isplate.xlsx</td>
+								<td align="right">XLSX</td>
+							</tr>
+							<tr>
+								<td align="center">
+									<div class="checkbox">
+										<input type="checkbox" id="selectAtt03"> 
+										<label for="selectAtt03"></label>
+									</div>
+								</td>
+								<td>Upute za izradu.pdf</td>
+								<td align="right">PDF</td>
+							</tr>
+							<tr>
+								<td align="center">
+									<div class="checkbox">
+										<input type="checkbox" id="selectAtt05"> 
+										<label for="selectAtt05"></label>
+									</div>
+								</td>
+								<td>Notes.txt</td>
+								<td align="right">TXT</td>
+							</tr>
+							<tr>
+								<td align="center">
+									<div class="checkbox">
+										<input type="checkbox" id="selectAtt04"> 
+										<label for="selectAtt04"></label>
+									</div>
+								</td>
+								<td>Materijali.zip</td>
+								<td align="right">ZIP</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- /.table-responsive -->
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-success">Urudžbiraj</button>
+			</div>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->

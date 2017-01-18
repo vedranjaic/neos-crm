@@ -1,10 +1,18 @@
 // Template
+html,
+body {
+	height: 100%;
+}
 // Body
 body {
-	background-color: $grey-light;
-	&.login {
+	background-color: $white;
+	&.page-login {
 		background: $brand-teal;
 		background: linear-gradient(to left, $brand-teal, $brand-green-light);
+	}
+	&.page-index,
+	&.page-email {
+		padding-top: 110px;
 	}
 }
 
@@ -27,9 +35,13 @@ a {
 }
 
 // Container
+.content,
+.content-main {
+	height: 100%;
+}
 .content {
 	margin-left: $sidebar-width;
-	padding-top: 0;
+	margin-top: 1px;
 	border-top: 1px solid $grey-medium;
 	&.container-fluid {
 		padding-left: 0;
@@ -88,7 +100,7 @@ a {
 			display: block;
 			text-align: right;
 			padding-right: 50px;
-			margin-right: 25px;
+			// margin-right: 25px;
 			small {
 				text-transform: uppercase;
 				font-weight: 400;
@@ -103,12 +115,15 @@ a {
 			}
 		}
 		.dropdown-menu-right {
-			right: 75px;
+			right: 50px;
 			& > .active {
 				& > a {
 					background-color: $grey-sidebar;
 				}
 			}
+		}
+		.btn-add-new {
+			margin-left: 25px;
 		}
 		// Filter
 		.page-view {
@@ -235,6 +250,11 @@ a {
 }
 
 //--- [ FORMS ]
+.control-label {
+	font-family: $font;
+	font-weight: 700;
+	color: $grey-sidebar;
+}
 .form-control {
 	box-shadow: none;
 	border-color: #ddd;
@@ -319,6 +339,19 @@ input[type="checkbox"] {
 			}
 		}
 	}
+	// Checkboxes
+	&.table-select {
+		.select {
+			width: 10px;
+		}
+		.checkbox {
+			margin-top: 0;
+			margin-bottom: 0;
+			label {
+				color: $grey-sidebar;
+			}
+		}
+	}
 }
 .table-striped {
 	& > thead {
@@ -336,6 +369,26 @@ input[type="checkbox"] {
 			}
 			&:nth-of-type(even) {
 				background-color: $grey-light;
+			}
+		}
+	}
+}
+
+
+// --- [ TABLE DATA ]
+.table-data {
+	width: 80%;
+	float: left;
+	border-right: 1px solid $grey-medium;
+}
+.table-filter {
+	width: 20%;
+	float: left;
+	thead {
+		& > tr {
+			th {
+				background-color: $grey-light;
+				border-bottom: 0;
 			}
 		}
 	}
