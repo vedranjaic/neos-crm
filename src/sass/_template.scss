@@ -376,7 +376,7 @@ input[type="checkbox"] {
 
 
 // --- [ TABLE DATA ]
-.table-data {
+.table-accounts {
 	width: 80%;
 	float: left;
 	border-right: 1px solid $grey-medium;
@@ -394,6 +394,49 @@ input[type="checkbox"] {
 	}
 }
 
+
+// --- [ MODALS ]
+.modal {
+	.modal-header,
+	.modal-footer {
+		padding: 15px 25px;
+	}
+	.modal-body {
+		padding: 25px;
+	}
+	// Tabbed modal
+	&.modal-tabbed {
+		.modal-content {
+			background-color: transparent;
+			box-shadow: none;
+			border: 0;
+		}
+		.modal-header {
+			padding: 0;
+			border-bottom: 0;
+			.nav-tabs {
+				a {
+					font-family: $font;
+					font-weight: 500;
+					color: $grey-sidebar-font;
+					font-size: 18px;
+					padding: 15px 25px;
+					background-color: $grey-sidebar;
+				}
+				.active {
+					a {
+						background-color: $white;
+						color: $grey-sidebar;
+					}
+				}
+			}
+		}
+		.modal-body,
+		.modal-footer {
+			background-color: $white;
+		}
+	}
+}
 
 
 

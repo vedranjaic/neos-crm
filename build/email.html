@@ -130,8 +130,8 @@
 		<ul class="main-menu nav list-unstyled">
 			<li><a href="#">Sales pipeline</a></li>
 			<li><a href="#">Leads</a></li>
-			<li class="active"><a href="#">Accounts</a></li>
-			<li><a href="#">Contacts</a></li>
+			<li class="active"><a href="accounts.html">Accounts</a></li>
+			<li><a href="contacts.html">Contacts</a></li>
 			<li><a href="#">Campaigns</a></li>
 			<li><a href="#">Projects</a></li>
 			<li>
@@ -159,7 +159,7 @@
 
 			<div class="page-heading">
 				<h3 class="page-title">E-mail</h3>
-				<small class="page-subtitle">Showing <strong>7</strong> <strong>recently viewed</strong> accounts out of <strong>1136</strong>.</small>
+				<small class="page-subtitle">Showing <strong>7</strong> <strong>recently viewed</strong> @@filter-view out of <strong>1136</strong>.</small>
 				<div class="page-control">
 					<ul class="list-inline">
 						<li class="dropdown">
@@ -314,34 +314,190 @@
 	<!-- /.content -->
 
 	
-	<div class="modal fade" tabindex="-1" role="dialog" id="modalTableEdit">
+	<div class="modal fade modal-tabbed" tabindex="-1" role="dialog" id="accountDetails">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+
+					<ul class="nav nav-tabs">
+						<li role="presentation" class="active"><a href="#">Account details</a></li>
+						<li role="presentation"><a href="#">Contacts</a></li>
+					</ul>
+
+				</div>
+				<div class="modal-body">
+					<form class="row">
+
+						<div class="col-sm-4">
+							<div class="form-group">
+								<label for="accountName" class="control-label">Name:</label>
+								<input type="text" class="form-control" id="accountName" placeholder="Name">
+							</div>
+							<div class="form-group">
+								<label for="accountAddress" class="control-label">Address:</label>
+								<input type="text" class="form-control" id="accountAddress" placeholder="Address">
+							</div>
+							<div class="form-group">
+								<label for="accountZipCode" class="control-label">Zip code:</label>
+								<input type="number" class="form-control" id="accountZipCode" placeholder="Zip">
+							</div>
+							<div class="form-group">
+								<label for="accountTown" class="control-label">Town:</label>
+								<input type="text" class="form-control" id="accountTown" placeholder="Town">
+							</div>
+						</div>
+						<!-- /.col-sm-4 -->
+
+						<div class="col-sm-4">
+							<div class="form-group">
+								<label for="accountCountry" class="control-label">Country:</label>
+								<select class="input-sm form-control" id="accountCountry">
+									<option>Country 1 (+385)</option>
+									<option>Country 2 (+385)</option>
+									<option>Country 3 (+385)</option>
+									<option>Country 4 (+385)</option>
+									<option>Country 5 (+385)</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="accountPhone" class="control-label">E-mail:</label>
+								<input type="email" class="form-control" id="accountPhone" placeholder="E-mail">
+							</div>
+							<div class="form-group">
+								<label for="accountPhone" class="control-label">Phone:</label>
+								<input type="text" class="form-control" id="accountPhone" placeholder="Phone number">
+							</div>
+							<div class="form-group">
+								<label for="accountWeb" class="control-label">Web URL:</label>
+								<input type="text" class="form-control" id="accountWeb" placeholder="http://">
+							</div>
+						</div>
+						<!-- /.col-sm-4 -->
+
+						<div class="col-sm-4">
+							<div class="form-group">
+								<label for="accountIBAN" class="control-label">IBAN:</label>
+								<input type="text" class="form-control" id="accountIBAN" placeholder="IBAN number">
+							</div>
+							<div class="form-group">
+								<label for="accountSWIFT" class="control-label">SWIFT:</label>
+								<input type="text" class="form-control" id="accountSWIFT" placeholder="SWIFT number">
+							</div>
+							<div class="form-group">
+								<label for="accountAccountType" class="control-label">Account type: <span>*</span></label>
+								<select class="input-sm form-control" id="accountAccountType">
+									<option>Type 1</option>
+									<option>Type 2</option>
+									<option>Type 3</option>
+									<option>Type 4</option>
+									<option>Type 5</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="accountIndustryType" class="control-label">Industry type: <span>*</span></label>
+								<select class="input-sm form-control" id="accountIndustryType">
+									<option>Industry 1</option>
+									<option>Industry 2</option>
+									<option>Industry 3</option>
+									<option>Industry 4</option>
+									<option>Industry 5</option>
+								</select>
+							</div>
+						</div>
+						<!-- /.col-sm-4 -->
+					
+						<div class="col-sm-12 form-group accountNote">
+							<label for="accountNote" class="control-label">Note:</label>
+							<textarea class="form-control" id="accountNote" rows="3"></textarea>
+						</div>
+						<!-- /.col-sm-12 form-group -->
+
+						<div class="col-sm-12 form-group">
+							<div class="checkbox">
+								<input type="checkbox" id="accountActive"> 
+								<label for="accountActive">Active</label>
+							</div>
+						</div>
+						<!-- /.col-sm-12 form-group -->
+
+
+					</form>
+				</div>
+				<div class="modal-footer">
+					<div class="modal-actions pull-right">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Save changes</button>
+					</div>
+					<!-- /.modal-actions -->
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+	<div class="modal fade" tabindex="-1" role="dialog" id="contactDetails">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title">Modal title</h4>
+					<h4 class="modal-title">Contact details</h4>
 				</div>
 				<div class="modal-body">
-					<form>
-						<div class="form-group">
-							<label for="exampleInputEmail1">Email address</label>
-							<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+					<form class="row">
+
+						<div class="col-sm-6">
+							<div class="form-group">
+								<label for="contactFirstName" class="control-label">First name:</label>
+								<input type="text" class="form-control" id="contactFirstName" placeholder="First name">
+							</div>
+							<div class="form-group">
+								<label for="contactLastName" class="control-label">Last name:</label>
+								<input type="text" class="form-control" id="contactLastName" placeholder="Last name">
+							</div>
+							<div class="form-group">
+								<label for="contactEmailPrimary" class="control-label">Primary e-mail:</label>
+								<input type="email" class="form-control" id="contactEmailPrimary" placeholder="Email">
+							</div>
+							<div class="form-group">
+								<label for="contactEmailSecondary" class="control-label">Secondary e-mail:</label>
+								<input type="email" class="form-control" id="contactEmailSecondary" placeholder="Email">
+							</div>
 						</div>
-						<div class="form-group">
-							<label for="exampleInputPassword1">Password</label>
-							<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+						<!-- /.col-sm-6 -->
+
+						<div class="col-sm-6">
+							<div class="form-group">
+								<label for="contactPhone" class="control-label">Phone:</label>
+								<input type="text" class="form-control" id="contactPhone" placeholder="Phone number">
+							</div>
+							<div class="form-group">
+								<label for="contactMobilePhone" class="control-label">Mobile phone:</label>
+								<input type="text" class="form-control" id="contactMobilePhone" placeholder="Mobile phone number">
+							</div>
+							<div class="form-group">
+								<label for="contactFax" class="control-label">Fax:</label>
+								<input type="text" class="form-control" id="contactFax" placeholder="Fax number">
+							</div>
+							<div class="form-group">
+								<label for="contactCountry" class="control-label">Country:</label>
+								<select class="input-sm form-control" id="contactCountry">
+									<option>Country 1 (+385)</option>
+									<option>Country 2 (+385)</option>
+									<option>Country 3 (+385)</option>
+									<option>Country 4 (+385)</option>
+									<option>Country 5 (+385)</option>
+								</select>
+							</div>
 						</div>
-						<div class="form-group">
-							<label for="exampleInputFile">File input</label>
-							<input type="file" id="exampleInputFile">
-							<p class="help-block">Example block-level help text here.</p>
+						<!-- /.col-sm-6 -->
+					
+						<div class="col-sm-12 form-group contactComment">
+							<label for="contactComment" class="control-label">Comment:</label>
+							<textarea class="form-control" id="contactComment" rows="3"></textarea>
 						</div>
-						<div class="checkbox">
-							<label>
-								<input type="checkbox"> Check me out
-							</label>
-						</div>
-						<button type="submit" class="btn btn-default">Submit</button>
+						<!-- /.col-sm-12 form-group -->
+
 					</form>
 				</div>
 				<div class="modal-footer">

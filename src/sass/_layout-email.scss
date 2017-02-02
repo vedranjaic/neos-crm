@@ -67,8 +67,10 @@
 }
 
 // Att modal
-.modal-header {
-	background-color: $grey-sidebar;
+.modal-email-attachments {
+	.modal-header {
+		background-color: $grey-sidebar;
+	}
 }
 .modal-title {
 	font-family: $font;

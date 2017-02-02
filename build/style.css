@@ -7657,7 +7657,7 @@ input[type="checkbox"] {
   background-color: #f3f5f6;
 }
 
-.table-data {
+.table-accounts {
   width: 80%;
   float: left;
   border-right: 1px solid #f1f1f1;
@@ -7670,6 +7670,39 @@ input[type="checkbox"] {
 .table-filter thead > tr th {
   background-color: #f3f5f6;
   border-bottom: 0;
+}
+
+.modal .modal-header,
+.modal .modal-footer {
+  padding: 15px 25px;
+}
+.modal .modal-body {
+  padding: 25px;
+}
+.modal.modal-tabbed .modal-content {
+  background-color: transparent;
+  box-shadow: none;
+  border: 0;
+}
+.modal.modal-tabbed .modal-header {
+  padding: 0;
+  border-bottom: 0;
+}
+.modal.modal-tabbed .modal-header .nav-tabs a {
+  font-family: "Quicksand", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  color: #dde2e5;
+  font-size: 18px;
+  padding: 15px 25px;
+  background-color: #788e9a;
+}
+.modal.modal-tabbed .modal-header .nav-tabs .active a {
+  background-color: #ffffff;
+  color: #788e9a;
+}
+.modal.modal-tabbed .modal-body,
+.modal.modal-tabbed .modal-footer {
+  background-color: #ffffff;
 }
 
 @font-face {
@@ -7957,7 +7990,7 @@ input[type="checkbox"] {
   opacity: 0.6;
 }
 
-.modal-header {
+.modal-email-attachments .modal-header {
   background-color: #788e9a;
 }
 
@@ -8014,6 +8047,21 @@ input[type="checkbox"] {
 
 .form-attachments {
   margin-bottom: 30px;
+}
+
+#accountDetails .modal-dialog {
+  min-width: 900px;
+}
+#accountDetails .accountNote {
+  border-top: 1px solid #f3f5f6;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+#contactDetails .contactComment {
+  border-top: 1px solid #f3f5f6;
+  padding-top: 20px;
+  margin-top: 20px;
 }
 
 .sidebar {
