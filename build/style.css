@@ -7676,6 +7676,9 @@ input[type="checkbox"] {
 .modal .modal-footer {
   padding: 15px 25px;
 }
+.modal .modal-header {
+  background-color: #788e9a;
+}
 .modal .modal-body {
   padding: 25px;
 }
@@ -7687,6 +7690,7 @@ input[type="checkbox"] {
 .modal.modal-tabbed .modal-header {
   padding: 0;
   border-bottom: 0;
+  background-color: transparent;
 }
 .modal.modal-tabbed .modal-header .nav-tabs a {
   font-family: "Quicksand", Helvetica, Arial, sans-serif;
@@ -8056,6 +8060,10 @@ input[type="checkbox"] {
   border-top: 1px solid #f3f5f6;
   padding-top: 20px;
   margin-top: 20px;
+}
+
+#tableContacts input {
+  width: 100%;
 }
 
 #contactDetails .contactComment {

@@ -401,6 +401,11 @@ input[type="checkbox"] {
 	.modal-footer {
 		padding: 15px 25px;
 	}
+	// Modal header
+	.modal-header {
+		background-color: $grey-sidebar;
+	}
+	// Modal body
 	.modal-body {
 		padding: 25px;
 	}
@@ -414,6 +419,7 @@ input[type="checkbox"] {
 		.modal-header {
 			padding: 0;
 			border-bottom: 0;
+			background-color: transparent;
 			.nav-tabs {
 				a {
 					font-family: $font;
